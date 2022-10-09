@@ -41,7 +41,7 @@ public class LinkedList<E> extends AbstractList<E> {
         Node<E> node = head, temp;//这里是创了两个链表，一个存中间值
         for (int i = 0; i < index; i++) node = node.next;//找到插入节点前驱的位置i<index
         temp = node.next;
-        node.next = new Node<E>(e);
+        node.next = new Node<>(e);
         node.next.next=temp;
         size++;
     }
@@ -50,7 +50,7 @@ public class LinkedList<E> extends AbstractList<E> {
      * 安全检查
      * 将被删除元素的前一节点的后继节点直接接到被删除元素后一节点
      * @param index 位置
-     * @return删除的元素
+     * @return 删除的元素
      * ->Aa->Dd->Bb->Cc  Dd  ：->Aa->Bb->Cc
      * node=A; temp=d;
      * node.next=node.next.next=B;
