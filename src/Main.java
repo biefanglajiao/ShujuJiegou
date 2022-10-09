@@ -1,21 +1,21 @@
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         /****
          * 顺序表
          */
-        ArrayList<String> list =new ArrayList<>();
-        list.add("a" ,0);
-        list.add("b",0);
+        ArrayList<String> list = new ArrayList<>();
+        list.add("a", 0);
+        list.add("b", 0);
         list.remove(0);
 
         /*****
          * 链表
          */
-        LinkedList<String>linkedList=new LinkedList<>();
-        linkedList.add("A",0);
-        linkedList.add("B",1);
-        linkedList.add("C",2);
-        linkedList.add("D",1);
+        LinkedList<String> linkedList = new LinkedList<>();
+        linkedList.add("A", 0);
+        linkedList.add("B", 1);
+        linkedList.add("C", 2);
+        linkedList.add("D", 1);
         linkedList.remove(1);
         System.out.println(linkedList.get(1));
         System.out.println(linkedList.size());
@@ -33,6 +33,25 @@ public class Main {
          * * 动态扩充容量，无需担心容量问题
          * * 访问元素需要依次寻找，随机访问元素效率低下
          */
+
+
+        /***
+         * 用顺序表实现栈操作
+         */
+        ArrayStack<String> arrayStack = new ArrayStack<>();
+        arrayStack.push("a");
+        arrayStack.push("b");
+        arrayStack.pop();
+        arrayStack.push("c");
+
+        /***
+         * 用链表实现栈操作
+         */
+        LinkStack<String> linkStack=new LinkStack<>();
+        linkStack.push("a");
+        linkStack.push("b");
+        linkStack.pop();
+        linkStack.push("c");
     }
 
 }
