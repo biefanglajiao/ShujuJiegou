@@ -52,6 +52,36 @@ public class Main {
         linkStack.push("b");
         linkStack.pop();
         linkStack.push("c");
+
+
+        /*****
+         * 队列操作
+         */
+        /**顺序表实现
+         *
+         */
+        ArrayQueue<String>arrayQueue=new ArrayQueue<>();
+        arrayQueue.offer("A");
+        arrayQueue.offer("B");
+        arrayQueue.offer("c");
+        arrayQueue.poll();
+        arrayQueue.offer("d");
+        /**
+         * 链表实现
+         */
+        LinkQueue<String> linkQueue=new LinkQueue<>();
+        linkQueue.offer("a");
+        linkQueue.offer("b");
+        linkQueue.offer("c");
+        linkQueue.offer("d");
+        linkQueue.poll();
+        linkQueue.offer("e");
+        linkQueue.offer("f");
+        linkQueue.offer("g");
+        linkQueue.poll();
+        linkQueue.poll();
+        linkQueue.offer("s");
+        System.out.println("aaa");
     }
 
 }
