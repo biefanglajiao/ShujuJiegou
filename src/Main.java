@@ -82,6 +82,31 @@ public class Main {
         linkQueue.poll();
         linkQueue.offer("s");
         System.out.println("aaa");
+
+        /****
+        * 关于二叉树
+        * */
+
+        /*创建二叉树*/
+        /***
+         *    a
+         *  b  e
+         * c d * f
+         */
+        TreeNode<String> node =new TreeNode<>("A");
+        node.left=new TreeNode<>("B");
+        node.right=new TreeNode<>("E");
+        node.left.left=new TreeNode<>("C");
+        node.left.right=new TreeNode<>("D");
+        node.right.right=new TreeNode<>("F");
+        /*q前序遍历*/
+        node.QianxuBianli(node);
+        System.out.println();
+        node.ZhongxuBianli(node);
+        System.out.println();
+        node.HouxuBianli(node);
+
     }
+
 
 }
